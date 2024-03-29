@@ -33,9 +33,57 @@ class _HomePageState extends State<HomePage> {
         elevation: 10,
         title: const Text('MedEase',
         style: TextStyle(
+          color: Vx.red900,
           letterSpacing: 2
         ),),
 
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Constants.appBarColor,
+              ),
+              child: CircleAvatar(
+                backgroundColor: Constants.iconColor,
+                child: Image.asset('assets/images/doctor.png',
+                height: 100,
+                width: 100,
+                fit: BoxFit.scaleDown,
+                ),
+              ),
+            ),
+            ListTile(
+              title: const Text('Profile'),
+              leading:  Icon(Icons.person,
+              color: Constants.iconActiveColor,),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: const Text('Setting'),
+              leading:  Icon(Icons.settings,
+                  color: Constants.iconActiveColor),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: const Text('About'),
+              leading:  Icon(Icons.info,
+                  color: Constants.iconActiveColor),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

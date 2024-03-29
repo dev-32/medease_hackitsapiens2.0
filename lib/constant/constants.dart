@@ -6,4 +6,5 @@ class Constants {
   static Color backgroundColor = Vx.orange50;
   static Color iconColor = Vx.orange600;
   static Color iconActiveColor = Vx.orange800;
+  static Color containerColor = Vx.orange200;
 }
