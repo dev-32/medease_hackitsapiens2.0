@@ -4,6 +4,7 @@ import 'package:hack/constant/constants.dart';
 import 'package:hack/widgets/dashboard/custom_container.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../example/patient_list.dart';
 import 'custom_patient_list.dart';
 
 class DashBoardScreen extends StatelessWidget {
@@ -17,7 +18,8 @@ class DashBoardScreen extends StatelessWidget {
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>
-              const CustomPatientList()));
+                  CustomPatientList(
+                      modelDataList: ExamplePatientList.patientListTest)));
             },
               child: CustomContainer(numCount: '28', textName: 'Active Patients')),
           CustomContainer(numCount: '2', textName: 'Referred Patients'),
