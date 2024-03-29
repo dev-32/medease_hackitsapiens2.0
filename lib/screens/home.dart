@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:hack/constant/constants.dart';
+import 'package:hack/screens/about.dart';
 import 'package:hack/screens/contact.dart';
 import 'package:hack/screens/dashboard.dart';
+import 'package:hack/screens/profile.dart';
+import 'package:hack/screens/setting.dart';
 import 'package:hack/screens/support.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -39,6 +42,7 @@ class _HomePageState extends State<HomePage> {
 
       ),
       drawer: Drawer(
+        backgroundColor: Constants.backgroundColor,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -60,8 +64,8 @@ class _HomePageState extends State<HomePage> {
               leading:  Icon(Icons.person,
               color: Constants.iconActiveColor,),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                const ProfileScreen()));
               },
             ),
             ListTile(
@@ -69,8 +73,8 @@ class _HomePageState extends State<HomePage> {
               leading:  Icon(Icons.settings,
                   color: Constants.iconActiveColor),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                const SettingScreen()));
               },
             ),
             ListTile(
@@ -78,8 +82,15 @@ class _HomePageState extends State<HomePage> {
               leading:  Icon(Icons.info,
                   color: Constants.iconActiveColor),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                const AboutScreen()));
+              },
+            ),
+            ListTile(
+              title: const Text('Logout'),
+              leading:  Icon(Icons.logout,
+                  color: Colors.red),
+              onTap: () {
               },
             ),
           ],
