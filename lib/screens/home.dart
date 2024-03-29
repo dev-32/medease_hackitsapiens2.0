@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:hack/constant/constants.dart';
+import 'package:hack/screens/contact.dart';
+import 'package:hack/screens/dashboard.dart';
+import 'package:hack/screens/support.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,29 +18,21 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Likes',
-      style: optionStyle,
-    ),
-    Text(
-      'Search',
-      style: optionStyle,
-    ),
+    DashBoardScreen(),
+    ContactScreen(),
+    SupportScreen(),
+
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Constants.backgroundColor,
       appBar: AppBar(
-        backgroundColor: Vx.blue100,
-        elevation: 20,
+        backgroundColor: Constants.appBarColor,
+        elevation: 10,
         title: const Text('MedEase',
         style: TextStyle(
-          fontWeight: FontWeight.bold,
           letterSpacing: 2
         ),),
 
@@ -67,18 +63,27 @@ class _HomePageState extends State<HomePage> {
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
               color: Colors.black,
-              tabs: const [
+              tabs: [
                 GButton(
                   icon: Icons.medical_information,
                   text: 'Home',
+                  iconColor: Constants.iconColor,
+                  iconActiveColor: Constants.iconActiveColor,
+                  textColor: Vx.gray800,
                 ),
                 GButton(
-                  icon: Icons.favorite,
-                  text: 'Likes',
+                  icon: Icons.perm_contact_cal,
+                  text: 'Contacts',
+                  iconColor: Constants.iconColor,
+                  iconActiveColor: Constants.iconActiveColor,
+                  textColor: Vx.gray800,
                 ),
                 GButton(
-                  icon: Icons.help,
-                  text: 'Search',
+                  icon: Icons.contact_support,
+                  text: 'Support',
+                  iconColor: Constants.iconColor,
+                  iconActiveColor: Constants.iconActiveColor,
+                  textColor: Vx.gray800,
                 ),
               ],
               selectedIndex: _selectedIndex,
