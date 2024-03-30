@@ -7,6 +7,7 @@ A flutter project that mainly focuses on the Referral System of Patients efficie
 # Technology Used:
 - Flutter Framework
 - Dart Language
-- Firebase
+- Firebase Authentication
+- Cloud Firestore
 
 
