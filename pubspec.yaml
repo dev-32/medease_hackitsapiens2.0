@@ -26,6 +26,7 @@ dependencies:
   velocity_x: ^4.1.2
   lottie: ^3.1.0
   google_nav_bar: ^5.0.6
+  image_picker:
 
 dev_dependencies:
   flutter_test:

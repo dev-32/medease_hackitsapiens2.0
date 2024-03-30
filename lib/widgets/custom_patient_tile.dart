@@ -22,7 +22,8 @@ class CustomTilePatient extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    child: Image.asset('assets/images/patient.png'),
+                    child: modelData.gender == 'Male' ? 
+                        Image.asset('assets/images/man.png'): Image.asset('assets/images/patient.png'),
                   ),
                 ],
               ),

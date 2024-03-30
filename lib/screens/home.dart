@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:hack/constant/constants.dart';
 import 'package:hack/screens/about.dart';
+import 'package:hack/screens/add_patients.dart';
 import 'package:hack/screens/contact.dart';
 import 'package:hack/screens/dashboard.dart';
 import 'package:hack/screens/profile.dart';
@@ -39,6 +40,13 @@ class _HomePageState extends State<HomePage> {
           color: Vx.red900,
           letterSpacing: 2
         ),),
+        actions: [
+          IconButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                const AddPatientScreen()));
+          },
+              icon: const Icon(Icons.add_circle_outline_sharp))
+        ],
 
       ),
       drawer: Drawer(

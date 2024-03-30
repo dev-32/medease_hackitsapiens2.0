@@ -18,10 +18,9 @@ class DashBoardScreen extends StatelessWidget {
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                  CustomPatientList(
-                      modelDataList: ExamplePatientList.patientListTest)));
+                  CustomPatientList()));
             },
-              child: CustomContainer(numCount: '28', textName: 'Active Patients')),
+              child: CustomContainer(numCount: ExamplePatientList.patientListTest.length.toString(), textName: 'Active Patients')),
           CustomContainer(numCount: '2', textName: 'Referred Patients'),
           CustomContainer(numCount: '2', textName: 'Pending Referred Patients'),
           CustomContainer(numCount: '2', textName: 'Accepted Patients (Referred)'),
