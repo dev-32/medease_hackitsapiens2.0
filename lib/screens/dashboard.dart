@@ -19,18 +19,17 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    fetchAllPatients().then((List list){
-      setState(() {
-        patients = list;
-      });
-    });
+    // // fetchAllPatients().then((List list){
+    // //   setState(() {
+    // //     patients = list;
+    // //   });
+    // });
   }
   Future<List> fetchAllPatients() async {
     dynamic patientList = [];
     DocumentSnapshot documentSnapshot =
     await FirebaseFirestore.instance.collection('patients').doc(FirebaseAuth.instance.currentUser!.uid).get();
-    patientList = documentSnapshot.asStringList();
-    print(patientList);
+    patientList = documentSnapshot.get('age');
     return patientList;
   }
   @override
@@ -44,7 +43,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   const CustomPatientList()));
             },
               child: CustomContainer(numCount: ExamplePatientList.patientListTest.length.toString(), textName: 'Active Patients')),
-           CustomContainer(numCount: patients.length.toString(), textName: 'Referred Patients'),
+           const CustomContainer(numCount: '0', textName: 'Referred Patients'),
           const CustomContainer(numCount: '2', textName: 'Pending Referred Patients'),
           const CustomContainer(numCount: '2', textName: 'Accepted Patients (Referred)'),
         ],
