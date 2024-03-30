@@ -18,14 +18,14 @@ class DashBoardScreen extends StatelessWidget {
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                  CustomPatientList()));
+                  const CustomPatientList()));
             },
               child: CustomContainer(numCount: ExamplePatientList.patientListTest.length.toString(), textName: 'Active Patients')),
-          CustomContainer(numCount: '2', textName: 'Referred Patients'),
-          CustomContainer(numCount: '2', textName: 'Pending Referred Patients'),
-          CustomContainer(numCount: '2', textName: 'Accepted Patients (Referred)'),
+          const CustomContainer(numCount: '2', textName: 'Referred Patients'),
+          const CustomContainer(numCount: '2', textName: 'Pending Referred Patients'),
+          const CustomContainer(numCount: '2', textName: 'Accepted Patients (Referred)'),
         ],
-      ).pOnly(top: 24),
+      ),
     );
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475220792855",
+    "project_id": "medease-52e61",
+    "storage_bucket": "medease-52e61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475220792855:android:5235c21f94d5f24775ee52",
+        "android_client_info": {
+          "package_name": "com.medease.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEDC_m__WJ5tdrvq4TD2RcK0omZacZVl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

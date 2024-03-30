@@ -27,6 +27,9 @@ dependencies:
   lottie: ^3.1.0
   google_nav_bar: ^5.0.6
   image_picker:
+  firebase_auth:
+  firebase_core:
+  firebase_cloud_firestore:
 
 dev_dependencies:
   flutter_test:

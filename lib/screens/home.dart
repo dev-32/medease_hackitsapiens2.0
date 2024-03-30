@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:hack/constant/constants.dart';
@@ -5,6 +6,7 @@ import 'package:hack/screens/about.dart';
 import 'package:hack/screens/add_patients.dart';
 import 'package:hack/screens/contact.dart';
 import 'package:hack/screens/dashboard.dart';
+import 'package:hack/screens/login_page.dart';
 import 'package:hack/screens/profile.dart';
 import 'package:hack/screens/setting.dart';
 import 'package:hack/screens/support.dart';
@@ -96,9 +98,12 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               title: const Text('Logout'),
-              leading:  Icon(Icons.logout,
+              leading: const  Icon(Icons.logout,
                   color: Colors.red),
-              onTap: () {
+              onTap: () async{
+                await FirebaseAuth.instance.signOut();
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                    const LoginPage()));
               },
             ),
           ],

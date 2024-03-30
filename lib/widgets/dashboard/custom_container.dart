@@ -10,7 +10,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 180,
+      height: 120,
       color: Constants.containerColor,
       child:  Column(
         mainAxisAlignment: MainAxisAlignment.center,
