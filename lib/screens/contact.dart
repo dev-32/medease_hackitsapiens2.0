@@ -7,9 +7,7 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Center(
-          child:Text("2"),
-        )
+
       ],
     );
   }

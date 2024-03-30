@@ -1,6 +1,7 @@
 import 'package:firebase_cloud_firestore/firebase_cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hack/constant/constants.dart';
+import 'package:hack/screens/avaliable_hosptials.dart';
 import 'package:hack/widgets/custom_textfield.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -52,7 +53,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
     pAge.clear();
     pGender.clear();
     pBlood.clear();
-    Navigator.pop(context);
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HospitalList()));
   } catch (e){
     print(e);
   }

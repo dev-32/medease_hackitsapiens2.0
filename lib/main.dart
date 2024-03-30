@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hack/screens/home.dart';
 import 'package:hack/screens/login_page.dart';
@@ -23,7 +24,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: StreamBuilder(stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (ctx, snapshot){
+        if(snapshot.hasData){
+          return const HomePage();
+        }
+        return const LoginPage();
+      },)
     );
   }
 }

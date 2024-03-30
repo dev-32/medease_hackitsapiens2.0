@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack/constant/constants.dart';
+import 'package:lottie/lottie.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../example/patient_list.dart';
