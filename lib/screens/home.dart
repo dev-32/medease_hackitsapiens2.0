@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Constants.appBarColor,
         elevation: 10,
+        centerTitle: true,
         title: const Text('MedEase',
         style: TextStyle(
           color: Vx.red900,
